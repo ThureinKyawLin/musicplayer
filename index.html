@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class=" bg-light vh-100">
+    
+    <!-- Navigation -->
+    <section class="w-75 container mt-2 mb-3 sticky-top">
+      <nav class="navbar navbar-expand-lg shadow-sm bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bolder fs-3 p-0" href="#">Music Player</a>
+          <button class="btn btn-outline-light btnForShowList"><i class="bi bi-chevron-double-right text-black fs-4"></i></button>
+          <button class="btn btn-outline-light btnRmList d-none"><i class="bi bi-chevron-double-left text-black fs-4"></i></button>
+        </div>
+      </nav>
+    </section>
+
+    <div class=" container bg-light overflow-scroll songs-list songsListToleft" style="height: 67%;">
+      <div class="playListContainer"></div>
+        <audio src="" class="audioTag"></audio>
+      </div>
+    </div>
+
+    <div class="container bg-light play-Img-Container d-none imgToLeft" style="height: 67%;">
+      <div class=" m-0 p-0">
+        <div class="d-flex justify-content-center" >
+          <img src="./img/songs-list.png" class="pauseImgSize bg-danger trackWidth d-block p-0 m-0 rounded-2 " alt="">
+        </div>
+        <div class=" d-flex justify-content-center mt-2">
+            <h3 class="list-group list-group-item trackWidth rounded-2 text-center text-light fw-semibold bg-danger title">${trackName}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container bg-light mt-auto">
+      <div class="showTime text-center mt-4 mb-2 playedAndTotalTime user-select-none">00:00 / 00:00</div>
+      <div id="progressBar" class=" m-auto">
+        <div id="currentProgress"></div>
+      </div>
+      <div class="musicPlayer d-flex justify-content-center">
+        <i class=" bi bi-skip-backward-circle control previousBtn"></i>
+        <i class=" bi bi-play-circle control playBtn"></i>
+        <i class=" bi bi-pause-circle control pauseBtn"></i>
+        <i class=" bi bi-skip-forward-circle control nextBtn"></i>
+
+      </div>
+    
+    </div>
+
+    
+
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
